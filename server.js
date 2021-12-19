@@ -9,7 +9,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.post('https://myspotify-server.herokuapp.com/login', (req, res)=>{
+app.post('/login', (req, res)=>{
     const code = req.body.code;
     const spotifyApi = new SpotifyWebApi({
         redirectUri: process.env.REDIRECT_URI,
