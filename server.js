@@ -38,7 +38,7 @@ app.post('/refresh', (req, res)=>{
         clientSecret: process.env.CLIENT_SECRET,
         refreshToken
     })
-    console.log("hi himanshu singhal")
+    // console.log("hi himanshu singhal")
     spotifyApi
         .refreshAccessToken()
         .then(data=>{
